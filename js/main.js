@@ -43,3 +43,14 @@ window.addEventListener('scroll', _.throttle(function () {
   }
 }, 300));
 // _.throttle(함수, 시간(ms)
+
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl, index) {
+  //gsap.to(요소, 지속시간, 옵션)
+  gsap.to(fadeEl, 1, {
+    // fadeEl에 애니메이션이 몇 초 뒤에 실행될 것인지
+    delay: (index + 1) * .7,
+    // index와 함께 해서 첫 번째 요소 = 0.7초 뒤에 실행, 두 번째 요소 = 1.4초 뒤에 실행...
+    opacity: 1,
+  });
+});
