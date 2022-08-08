@@ -364,3 +364,110 @@ header .badges .badge {
 .visual .fade-in {
   opacity: 0;
 }
+
+/* notice */
+.notice {
+
+}
+
+.notice .notice-line {
+  position: relative;
+  
+
+}
+
+.notice .notice-line .bg-left {
+  /* 부모 요소 기준으로 배치 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+}
+
+.notice .notice-line .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+
+.notice .notice-line .inner {
+  height: 62px;
+  display: flex;
+}
+
+.notice .notice-line .inner .inner__left {
+  width: 60%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  /* 수직 가운데 정렬 */
+  align-items: center;
+}
+
+.notice .notice-line .inner .inner__left h2 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.notice .notice-line .inner .inner__left .swiper-container {
+  background-color: orange;
+  /* 최대한 늘어나기 */
+  flex-grow: 1;
+  height: 62px;
+}
+
+.notice .notice-line .inner .inner__left .notice-line__more {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  /* 수평 가운데 정렬 */
+  justify-content: center;
+  /* 수직 가운데 정렬 */
+  align-items: center;
+}
+
+.notice .notice-line .inner .inner__left .notice-line__more .material-icons {
+  color: #fff;
+  /* icon의 기본 크기는 24px */
+  font-size: 30px;
+}
+
+
+.notice .notice-line .inner .inner__right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  /* 수평의 끝점으로 이동 (오른쪽 정렬) */
+  justify-content: flex-end;
+  /* 수직 가운데 정렬 */
+  align-items: center;
+}
+
+.notice .notice-line .inner .inner__right h2 {
+  font-size: 17px;
+  font-weight: 700;
+
+}
+
+.notice .notice-line .inner .inner__right .toggle-promotion {
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+  display: flex;
+  /* 수평 가운데 정렬 */
+  justify-content: center;
+  /* 수직 가운데 정렬 */
+  align-items: center;
+}
+
+.notice .notice-line .inner .inner__right .toggle-promotion .material-icons {
+  font-size: 30px;
+
+}
