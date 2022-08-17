@@ -94,3 +94,31 @@ promotionToggleBtn.addEventListener('click', function () {
     promotionEl.classList.remove('hide');
   }
 });
+
+// 범위 랜덤 함수(소수점 2자리까지)
+function random(min, max) {
+  // `.toFixed()`를 통해 반환된 문자 데이터를,
+  // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
+
+
+function floatingObject(selector, delay, size) {
+  // gsap.to(요소, 시간, 옵션)
+  gsap.to(selector, random(1.5, 2.5), {
+    // y축으로 얼마나 이동하면서 애니메이션 처리할지
+    y: size,
+    // repeat: -1 = 무한반복 
+    repeat: -1,
+    // yoyo: true = 애니메이션이 처리가 되면 거꾸로 애니메이션 동작
+    yoyo: true,
+    // gsap easing
+    ease: Power1.easeInOut,
+    // 몇 초 뒤에 애니메이션 실행할지
+    delay: random(0, delay)
+  });
+}
+
+floatingObject('.floating1', 1, 15);
+floatingObject('.floating2', .5, 15);
+floatingObject('.floating3', 1.5, 20);
