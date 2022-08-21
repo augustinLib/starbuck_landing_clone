@@ -83,6 +83,20 @@ new Swiper('.promotion .swiper-container', {
   }
 });
 
+new Swiper(".awards .swiper-container", {
+  // 자동재생 ON
+  autoplay: true,
+  loop: true,
+  // 사이사이의 여백 30px
+  spaceBetween: 30,
+  // 하나의 화면에 몇개의 slide가 보일 것인지
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
+  }
+});
+
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
 let isHidePromotion = false;
@@ -94,6 +108,8 @@ promotionToggleBtn.addEventListener('click', function () {
     promotionEl.classList.remove('hide');
   }
 });
+
+
 
 // 범위 랜덤 함수(소수점 2자리까지)
 function random(min, max) {
