@@ -151,3 +151,7 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller());
 });
 
+const thisYear = document.querySelector(".this-year");
+// textContent : 해당 요소가 가지고 있는 글자 요소
+// Date().getFullYear() : 현재 년도
+thisYear.textContent = new Date().getFullYear();
